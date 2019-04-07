@@ -13,7 +13,7 @@ class Sort {
     public:
         Sort(void *elements, size_t size) : elements(elements), size(size) {}
 
-        virtual void execute(void (*)(void*, int, int)) = 0;
+        virtual void execute(bool (*)(void*, int, int)) = 0;
 
         virtual string name() = 0;
 };

@@ -28,9 +28,9 @@ using namespace std;
 #   define ASSERT(condition, message) do { } while (false)
 #endif
 
-enum Algorithm { bubblesort, selectsort, insertsort, shellsort, quicksort, mergesort };
+enum Algorithm { bubblesort, selectsort, insertsort, shellsort, quicksort, mergeSort};
 
-typedef void (*fptr)(void*, int, int);
+typedef bool (*fptr)(void*, int, int);
 
 class Tester {
     private:
