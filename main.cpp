@@ -33,8 +33,7 @@ int main(int argc, char* argv[]) {
 
 void executeTests() {
     for (int i = 0; i < NUMBER_OF_TESTS; ++i) {
-        size_t size = 15;
-		//size_t size = mocker.generateRandomInt();
+		size_t size = mocker.generateRandomInt();
         int *array = mocker.generateRandomIntArray(size);
         Tester::integerSorts(array, size);
         cout << "Passed test: " << i + 1 << endl;
