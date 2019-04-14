@@ -10,6 +10,8 @@ class InsertSort : public Sort {
         void execute(bool (*compare)(void*, int, int)) {
             for(int i = 1; i<size; i++){
 				int j = i;
+                // Ten cuidado aquí, esto dará una violación de segmento
+                // Debería ser: while(j > 0 && !compare(elements, j-1, j))  j--;
 				while(!compare(elements, j-1, j) && j > 0)  j--;
 			}
         }
